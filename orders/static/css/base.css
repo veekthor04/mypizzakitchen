@@ -7,7 +7,7 @@ body {
     padding:0;
     font-family:helvetica, sans-serif;
     text-shadow: -0.4px 0 white, 0 0.4px white, 0.4px 0 white, 0 -0.4px white !important  ;
-    max-width: 100% !important;
+    max-width: 100% !important ;
 }
 
 h1, h2, h3, h4, h5 , h6 {
