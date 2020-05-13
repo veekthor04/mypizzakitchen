@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5 , h6 {
 
 a {
     text-decoration:none;
-    color:#5993bb;
+    color:blue;
 }
 
 a:hover {
@@ -25,10 +25,10 @@ a:hover {
 
 a.button, input[type="submit"] {
     color:#fff;
-    background:#5993bb;
+    background:blue;
     border-radius:4px;
-    padding:10px 20px;
-    font-size:16px;
+    padding:10px 10px;
+    font-size:14px;
     border:0;
 }
 
@@ -67,7 +67,7 @@ tbody tr.subtotal {
 }
 
 thead th, tbody tr.total {
-    background:#5993bb;
+    background:blue;
     color:#fff;
     font-weight:bold;
 }
@@ -100,7 +100,7 @@ form p label {
 }
 
 form p input {
-    width:300px;
+    width:auto;
     font-size:15px;
     margin-bottom:10px;
     padding:10px 12px;
@@ -147,7 +147,7 @@ ul.errorlist {
 }
 
 #content {
-    padding:0 10%;
+    padding:0 5%;
     overflow:hidden;
 }
 
@@ -173,7 +173,7 @@ ul.errorlist {
 }
 
 #sidebar ul li.selected {
-    background:#5993bb;
+    background:blue;
     border-radius:4px;
 }
 
@@ -212,7 +212,7 @@ ul.errorlist {
 }
 
 .product-detail img {
-    width:300px;
+    width:250px;
     float:left;
     padding:0 20px 20px 0;
 }
@@ -231,15 +231,16 @@ ul.errorlist {
 
 .order-info {
     float:right;
-    width:300px;
+    width:90%;
+    max-width: 400px;
     background:#efefef;
-    padding:10px 20px;
+    padding:5px 5px;
     color:#333;
-    border-bottom:4px solid #5993bb;
+    border-bottom:4px solid blue;
 }
 
 .order-info h3 {
-    color:#5993bb;
+    color:blue;
 }
 
 .order-info ul li {

@@ -12,7 +12,7 @@
 			<tr>
 				<th class="hide">Image</th>
 				<th>Product</th>
-				<th>Topping</th>
+				<th class="hide">Topping</th>
 				<th>Quantity</th>
 				<th>Remove</th>
 				<th class="hide">Unit price</th>
@@ -29,7 +29,7 @@
 					</a>
 				</td>
 				<td>{{ product.name }}</td>
-				<td>
+				<td class="hide">
 				{% for topping in item.topping_list %}
 					{{ topping }}
 				{% endfor %}
@@ -55,8 +55,8 @@
 			{% endfor %}
 			<tr class="total">
 				<td>Total</td>
-				<td class="hide" colspan="2"></td>
-				<td colspan="3"></td>
+				<td class="hide" colspan="3"></td>
+				<td colspan="2"></td>
 				<td class="num">${{ cart.get_total_price }}</td>
 			</tr>
 		</tbody>
