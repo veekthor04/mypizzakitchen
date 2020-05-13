@@ -6,7 +6,7 @@ body {
     margin:0;
     padding:0;
     font-family:helvetica, sans-serif;
-    text-shadow: -0.4px 0 white, 0 0.4px white, 0.4px 0 white, 0 -0.4px white !important  ;
+    text-shadow: -0.4px 0 black, 0 0.4px black, 0.4px 0 black, 0 -0.4px black !important  ;
     max-width: 100%;
 }
 
@@ -28,7 +28,7 @@ a.button, input[type="submit"] {
     background:#5993bb;
     border-radius:4px;
     padding:10px 20px;
-    font-size:14px;
+    font-size:16px;
     border:0;
 }
 
@@ -53,7 +53,7 @@ table {
 
 table th, table td {
     text-align:left;
-    font-size:14px;
+    font-size:16px;
     padding:10px;
     margin:0;
 }
@@ -77,7 +77,7 @@ table.cart {
 }
 
 table.cart img {
-    width:180px;
+    width:100%;
 }
 
 tbody td.num {
@@ -85,7 +85,7 @@ tbody td.num {
 }
 
 td input[type="submit"] {
-    font-size:12px;
+    font-size:14px;
     padding:4px 10px;
 }
 
@@ -95,13 +95,13 @@ form p label, form p input {
 }
 
 form p label {
-    font-size:14px;
+    font-size:16px;
     padding-bottom:4px;
 }
 
 form p input {
     width:300px;
-    font-size:13px;
+    font-size:15px;
     margin-bottom:10px;
     padding:10px 12px;
     border:0;
@@ -114,22 +114,22 @@ ul.errorlist {
    float:left;
    color:#ff0000;
    clear:both;
-   font-size:13px;
+   font-size:15px;
    margin:0;
    padding:0;
 }
 
 
 #header {
-    padding:10px 100px;
-    font-size:18px;
+    padding:10px 10%;
+    font-size:20px;
     overflow:auto;
 }
 
 #subheader {
     background:#ececec;
     color:#444;
-    padding:15px 100px;
+    padding:15px 10%;
     overflow:auto;
 }
 
@@ -137,7 +137,7 @@ ul.errorlist {
     font-family: 'Ubuntu', sans-serif;
     float:left;
     color:#333;
-    font-size:22px;
+    font-size:24px;
     margin-right:10%;
 }
 
@@ -147,7 +147,7 @@ ul.errorlist {
 }
 
 #content {
-    padding:0 100px;
+    padding:0 10%;
     overflow:hidden;
 }
 
@@ -189,7 +189,7 @@ ul.errorlist {
 }
 
 .product-list .item {
-    width:25%;
+    max-width:300px;
     padding:10px 20px 10px 0;
     float:left;
     text-align:center;
@@ -207,12 +207,12 @@ ul.errorlist {
 
 .product-detail .price {
     color:#333;
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
 }
 
 .product-detail img {
-    width:40%;
+    width:300px;
     float:left;
     padding:0 20px 20px 0;
 }
@@ -245,7 +245,7 @@ ul.errorlist {
 .order-info ul li {
     margin:0;
     padding:0;
-    font-size:14px;
+    font-size:16px;
 }
 
 .order-info p {
@@ -264,7 +264,7 @@ ul.errorlist {
 .languages {
    float:right;
    padding-top:4px;
-   font-size:14px;
+   font-size:16px;
 }
 
 .languages ul {
@@ -277,7 +277,7 @@ ul.errorlist {
 .languages ul li {
     float:left;
     margin:0 0 0 10px;
-    font-size:14px;
+    font-size:16px;
 }
 
 .languages p {
@@ -321,7 +321,7 @@ ul.errorlist {
 
 /* braintree hosted fields */
 form div.field {
-    font-size:13px;
+    font-size:15px;
     color:#666;
     width:300px;
     height:22px;
@@ -335,3 +335,8 @@ form div.field {
 #side{
   clear:both;
 }
+@media only screen and (max-width: 600px) {
+        .hide{
+            display: none;
+        }
+    }

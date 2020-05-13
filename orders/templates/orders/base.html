@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8" />
 	<title>{% block title %}My Pizza kitchen{% endblock %}</title>
 	<link href="{% static "css/base.css" %}" rel="stylesheet">
 	</head>
-<body style=" background-image: url({% static 'img/pizz.png' %});">
+<body style=" background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url({% static 'img/pizz.png' %}); ">
 	<div id="header">
 		<a href="/" class="logo">My Pizza Kitchen</a>
 	</div>

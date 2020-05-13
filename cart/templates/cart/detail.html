@@ -10,12 +10,12 @@
 	<table class="cart">
 		<thead>
 			<tr>
-				<th>Image</th>
+				<th class="hide">Image</th>
 				<th>Product</th>
 				<th>Topping</th>
 				<th>Quantity</th>
 				<th>Remove</th>
-				<th>Unit price</th>
+				<th class="hide">Unit price</th>
 				<th>Price</th>
 			</tr>
 		</thead>
@@ -23,7 +23,7 @@
 		{% for item in cart %}
 		{% with product=item.product %}
 			<tr>
-				<td>
+				<td class="hide">
 					<a href="{{ product.get_absolute_url }}">
 						<img src="{% if product.category|slugify == 'pizza' %} {% static 'img/pizza.png' %} {% elif product.category|slugify  == 'subs' %} {% static 'img/subs.png' %} {% else %} {% static 'img/blank.png' %}{% endif %}">
 					</a>
@@ -48,14 +48,15 @@
 						{% csrf_token %}
 					</form>
 				</td>
-				<td class="num">${{ item.price }}</td>
+				<td class="hide" class="num">${{ item.price }}</td>
 				<td class="num">${{ item.total_price }}</td>
 			</tr>
 			{% endwith %}
 			{% endfor %}
 			<tr class="total">
 				<td>Total</td>
-				<td colspan="5"></td>
+				<td class="hide" colspan="2"></td>
+				<td colspan="3"></td>
 				<td class="num">${{ cart.get_total_price }}</td>
 			</tr>
 		</tbody>
