@@ -1,26 +1,23 @@
-# Project 3
-
-Web Programming with Python and JavaScript
-
 My Pizza kitchen a web application for handling a pizza restaurant’s online orders. 
 Users can browse the restaurant’s menu, add items to their cart, and submit their 
 orders. The restaurant owner can add and update menu items, and view orders that have
-been placed. 
+been placed. A braintree sandbox payment portal has been added for payments.
+The app supports sending users a confirmation email once their purchase is complete
 
+Hosted project URL:https://mypizzakitchen.herokuapp.com/
 
 Additional infomation: 
 
 Admin mamagement: the admin can add products via '/admin/'
-the admin can view and print order details via '/admin/checkedout/order/' 
-
-Personal Touch: the app supports sending users a confirmation email once their 
-purchase is complete.
+the admin can view and print order details via '/admin/checkedout/order/
 
 Environmental variables used are:
 EMAIL_HOST,
 EMAIL_HOST_USER,
 EMAIL_HOST_PASSWORD
-
+BRAINTREE_PRIVATE_KEY
+BRAINTREE_PUBLIC_KEY
+BRAINTREE_MERCHANT_ID
 
 Files info: 
 

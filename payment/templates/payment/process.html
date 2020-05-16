@@ -19,6 +19,11 @@
     {% csrf_token %}
     <input type="submit" value="Pay">
   </form>
+  <br>
+  <p>For the braintree sandbox test you can use these card info</p>
+  <p>Card Number: 4005519200000004</p>
+  <p>CVV: 123</p>
+  <p>Expiration Date: mm/yy</p>
   <!-- includes the Braintree JS client SDK -->
   <script src="https://js.braintreegateway.com/web/3.58.0/js/client.min.js"></script>
   <script src="https://js.braintreegateway.com/web/3.58.0/js/hosted-fields.min.js"></script>
