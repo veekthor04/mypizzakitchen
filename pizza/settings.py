@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import braintree
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'payment.apps.PaymentConfig',
     'django.contrib.staticfiles',
 ]
 
@@ -133,8 +135,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-
-
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+# Braintree settings
+BRAINTREE_MERCHANT_ID = os.getenv('BRAINTREE_MERCHANT_ID') # Merchant ID
+BRAINTREE_PUBLIC_KEY = os.getenv('BRAINTREE_PUBLIC_KEY') # Public Key
+BRAINTREE_PRIVATE_KEY = os.getenv('BRAINTREE_PRIVATE_KEY') # Private key
+
+BRAINTREE_CONF = braintree.Configuration(
+braintree.Environment.Sandbox,
+BRAINTREE_MERCHANT_ID,
+BRAINTREE_PUBLIC_KEY,
+BRAINTREE_PRIVATE_KEY
+)

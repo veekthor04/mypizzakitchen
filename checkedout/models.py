@@ -10,6 +10,7 @@ class Order(models.Model):
 	address = models.CharField(max_length=250)
 	city = models.CharField(max_length=100)
 	paid = models.BooleanField(default=False)
+	braintree_id = models.CharField(max_length=150, blank=True)
 
 	def __str__(self):
 		return f'Order {self.id}'

@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import OrderItem, Order
 from .forms import OrderCreateForm
 from cart.cart import Cart
 from .tasks import order_created
 from django.contrib.admin.views.decorators import staff_member_required
+from django.urls import reverse
 
 # Create your views here.
 def order_create(request):
@@ -21,8 +22,11 @@ def order_create(request):
 			# clear the cart
 			cart.clear()
 			# launch asynchronous task
-			order_created(order.id)
-			return render(request, 'checkedout/order/created.html', {'order': order})
+			# set the order in the session
+			request.session['order_id'] = order.id
+			# redirect for payment
+			return redirect(reverse('payment:process'))
+			#return render(request, 'checkedout/order/created.html', {'order': order})
 	else:
 		form = OrderCreateForm()
 	return render(request, 'checkedout/order/create.html', {'cart': cart, 'form': form})
