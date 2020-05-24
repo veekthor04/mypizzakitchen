@@ -162,6 +162,11 @@ ul.errorlist {
     padding:0;
 }
 
+ul
+{
+    list-style-type: none;
+}
+
 #sidebar ul li {
     margin:0;
     list-style:none;
@@ -336,8 +341,8 @@ form div.field {
 #side{
   clear:both;
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
         .hide{
             display: none;
         }
-    }
+    } */
